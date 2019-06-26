@@ -1,0 +1,95 @@
+/* 
+ *  Created on : 24.03.2017, 01:39:01
+ *  @copyright : Samet Tarim
+ *  @author    : Samet Tarim aka prod3v3loper
+ *  @link      : https://www.prod3v3loper.com/
+ */
+
+.mb-accordion {
+
+    .mb-box {
+
+        @media @mq-m-min {
+
+            margin-top: -2px;
+            margin-bottom: 0;
+            border-radius: 0;
+        }
+
+        i {
+
+        }
+
+        h3 {
+
+            display: block;
+            padding: 0;
+
+            label {
+
+                position: relative;
+                display: block;
+                padding: 12px;
+                width: 100%;
+                cursor: pointer;
+
+                &:hover {
+
+                }
+            }
+        }
+    }
+
+    .mb-hide-input + h3 label {
+
+        .transition(all .5s ease-in-out);
+    }
+
+    .mb-hide-input {
+
+        display: none;
+        visibility: hidden;
+    }
+
+    .mb-hide-input:checked + label,
+        .mb-hide-input:checked + label:hover {
+
+        background: #5a9900;
+    }
+
+    .mb-box-content {
+
+        overflow: hidden;
+        height: 0;
+        min-height: 0;
+        margin: 0;
+
+        .transition(all .5s ease-in-out);
+
+        h3, div, p {
+            
+            visibility: hidden;
+            padding: 0;
+            
+            .opacity(0);
+            .transition(all .6s ease-in-out);
+        }
+    }
+
+    .mb-hide-input:checked ~ .mb-box-content {
+
+        height: auto;
+        min-height: 5px;
+
+        .transition(all .5s ease-in-out);
+
+        h3, div, p {
+            
+            visibility: visible;
+            padding: 10px;
+            
+            .opacity(1);
+            .transition(all .6s ease-in-out);
+        }
+    }
+}

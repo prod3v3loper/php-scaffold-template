@@ -1,0 +1,130 @@
+/* 
+ *  Created on : 24.03.2017, 01:39:01
+ *  @copyright : Samet Tarim
+ *  @author    : Samet Tarim aka prod3v3loper
+ *  @link      : https://www.prod3v3loper.com/
+ */
+
+/* -------------------------- *
+ *           @TABLE           *
+ * -------------------------- */
+table {
+
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-collapse: collapse;
+    border-spacing: 0;
+
+    caption {
+
+        padding:5px;
+        background-color: #F9F9F9;
+    }
+
+    tr {
+        th {
+            padding: 8px;
+            line-height: 20px;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        td {
+            padding: 8px;
+            line-height: 20px;
+            text-align: left;
+            vertical-align: top;
+            border-top: 1px solid #DDD;
+        }
+    }
+}
+
+.mb-table-strip {
+
+    tr:nth-child(even) {background: #F9F9F9;}
+    tr:nth-child(odd) {background: #FFF;}
+}
+
+.mb-table-border {
+
+    border:1px solid #DDD;
+
+    tr, th, td {
+
+        border:1px solid #DDD;
+    }
+}
+
+.mb-table-hover {
+    tr {
+        &:hover {
+            background: #F9F9F9;
+        }
+    }
+}
+
+.mb-table-condensed {
+    tr {
+        th {
+            padding: 2px 8px;
+        }
+
+        td {
+            padding: 2px 8px;
+        }
+    }
+}
+
+.mb-table-media, .mb-table-user {
+
+    tr {
+
+        &:hover {
+
+            a {
+
+                visibility: visible;
+            }
+        }
+
+        th {
+
+            padding: 2px 8px;
+        }
+
+        td {
+
+            padding: 2px 8px;
+
+            p {
+
+                padding: 0;
+            }
+
+            a {
+
+                display: inline-block;
+                visibility: hidden;
+                border-right: 1px solid #eee;
+                padding: 0 10px;
+                font-size: .8rem;
+
+                &:first-child {
+
+                    padding-left: 0;
+                }
+
+                &:last-child {
+
+                    border: 0;
+                }
+
+                i {
+
+                    font-size: .7rem;
+                }
+            }
+        }
+    }
+}

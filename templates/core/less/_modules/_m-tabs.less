@@ -1,0 +1,283 @@
+/* 
+ *  Created on : 24.03.2017, 01:39:01
+ *  @copyright : Samet Tarim
+ *  @author    : Samet Tarim aka prod3v3loper
+ *  @link      : https://www.prod3v3loper.com/
+ */
+
+.mb-tabs {
+
+    position: relative;  /* containing block for headings (top:0) */
+    background: #999;
+
+    &:hover h2 {
+
+        outline: none !important;
+    }
+
+    > label {
+
+        position: absolute;
+        z-index: 1;
+
+        border-right: 1px solid #fff;  
+
+        &:hover {
+
+            cursor: pointer;
+        }
+    }
+
+    > label,
+    > h2 {
+
+        font-size: 1.1em;
+        width: 20%;
+        height: 2em;
+        line-height: 2em;
+    }
+
+    > h2 {
+
+        position: relative;
+        margin: 0;
+        text-align: center;
+        background: #999;
+        color: #fff;
+    }
+
+    .mb-tab-checkbox,
+    > label ~ label,
+    > h2 ~ h2 {
+
+        position: absolute;
+        top: 0;
+    }
+
+    label:nth-child(1),
+        h2:nth-child(3) {
+
+        left: 0;
+    }
+
+    label:nth-child(5),
+        h2:nth-child(7) {
+
+        left: 20%;
+    }
+
+    label:nth-child(9),
+        h2:nth-child(11) {
+
+        left: 40%;
+    }
+
+    label:nth-child(13),
+        h2:nth-child(15) {
+
+        left: 60%;
+    }
+
+    label:nth-child(17),
+        h2:nth-child(19) {
+
+        left: 80%;
+    }
+
+    .mb-tab-checkbox {
+
+        opacity: 0;
+        position: absolute;
+
+        &:focus + h2 {
+
+            outline: 1px dotted #000;
+            outline-offset: 10px;
+        }
+
+        &:checked + h2 {
+
+            background: #f2f2f2;
+        }
+
+        &:checked + h2:after {
+
+            content: '';
+            margin: auto;
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            right: 0;
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 10px solid #333;
+        }
+    }
+
+    .mb-tab-checkbox + h2 + .mb-tab-content {
+
+        position: absolute !important;
+        clip: rect(1px, 1px, 1px, 1px);
+        padding:0 !important;
+        border:0 !important;
+        height: 1px !important; 
+        width: 1px !important; 
+        overflow: hidden;
+    }
+
+    .mb-tab-checkbox:checked + h2 + .mb-tab-content {
+
+        position: static !important;
+        padding: 1em !important;
+        height: auto !important; 
+        width: auto !important; 
+    }
+
+    > .mb-tab-content {
+        background: #fff;
+        padding: 1em;
+    }
+
+}
+
+/**
+ * Make it plain/simple below 45em (stack everything)
+ */
+@media screen and (max-width: 45em) {
+
+    /* hide unecessary label/control pairs */
+    .tabPanel-widget label,
+    .tabPanel-widget .mb-tab-ckckbox {
+
+        display: none;
+    }
+
+    /* reveal all panels */
+    .tabPanel-widget > .mb-tab-ckckbox + h2 + .mb-tab-content {
+
+        display: block !important;
+        position: static !important;
+        padding: 1em !important;
+        height: auto !important; 
+        width: auto !important; 
+    }
+
+    /* "unstyle" the heading */
+    .tabPanel-widget h2 {
+
+        width: auto;
+        position: static !important;
+        background: #999 !important;
+    }
+
+    /* "kill" the marker */
+    .tabPanel-widget h2:after {
+
+        display: none !important;
+    }
+
+}
+
+.tabs {
+    max-width: 90%;
+    float: none;
+    list-style: none;
+    padding: 0;
+    margin: 75px auto;
+    border-bottom: 4px solid #ccc;
+}
+.tabs:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+.tabs input[type=radio] {
+    display:none;
+}
+.tabs .mb-tab-label {
+
+    display: block;
+    float: left;
+    width: 21%;
+    color: #ccc;
+    font-size: 30px;
+    font-weight: normal;
+    text-decoration: none;
+    text-align: center;
+    line-height: 2;
+    cursor: pointer;
+    box-shadow: inset 0 4px #ccc;
+    border-bottom: 4px solid #ccc;
+    -webkit-transition: all 0.5s; /* Safari 3.1 to 6.0 */
+    transition: all 0.5s;
+}
+.tabs .mb-tab-label span {
+    display: none;
+}
+.tabs .mb-tab-label i {
+    padding: 5px;
+    margin-right: 0;
+}
+.tabs .mb-tab-label:hover {
+    color: #3498db;
+    box-shadow: inset 0 4px #3498db;
+    border-bottom: 4px solid #3498db;
+}
+.tab-content {
+
+    display: none;
+    width: 100%;
+    float: left;
+    padding: 15px;
+    box-sizing: border-box;
+    background-color:#ffffff;
+}
+
+.tab-content * {
+    -webkit-animation: scale 0.7s ease-in-out;
+    -moz-animation: scale 0.7s ease-in-out;
+    animation: scale 0.7s ease-in-out;
+}
+@keyframes scale {
+    0% {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.01);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.tabs [id^="tab"]:checked + .mb-tab-label {
+    background: #FFF;
+    box-shadow: inset 0 4px #3498db;
+    border-bottom: 4px solid #3498db;
+    color: #3498db;
+}
+#tab1:checked ~ #tab-content1,
+#tab2:checked ~ #tab-content2,
+#tab3:checked ~ #tab-content3,
+#tab4:checked ~ #tab-content4 {
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .tabs i {
+        padding: 5px;
+        margin-right: 10px;
+    }
+    .tabs .mb-tab-label span {
+        display: inline-block;
+    }
+    .tabs {
+        max-width: 750px;
+        margin: 50px auto;
+    }
+}

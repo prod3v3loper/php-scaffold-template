@@ -1,0 +1,100 @@
+/* 
+ *  Created on : 24.03.2017, 01:39:01
+ *  @copyright : Samet Tarim
+ *  @author    : Samet Tarim aka prod3v3loper
+ *  @link      : https://www.prod3v3loper.com/
+ */
+
+/* -------------------------- *
+ *          @TOOLTIP          *
+ * -------------------------- */
+.mb-tooltip {
+
+    display: inline-block; 
+    top:2px; 
+    left:7px; 
+    position:relative; 
+    z-index:2;
+
+    &:hover {
+
+        z-index:3;
+
+        .mb-tooltip-content { 
+
+            opacity:1; 
+            left:36px;
+            display:block;
+
+            b { 
+                height:0; 
+                width:0; 
+                border-color:#333 #333 transparent transparent; 
+                border-style:solid; 
+                border-width:9px 7px; 
+                position:absolute; 
+                left:-14px; 
+                top:8px; 
+            }
+        }
+    }
+
+    span {
+
+        display:inline-block; 
+        width:16px; 
+        height:16px; 
+        line-height:16px; 
+        font-size:0.9em; 
+        font-weight:bold; 
+        text-align:center; 
+        color:#FFF; 
+        cursor:help; 
+        background-color:#00AEEF; 
+        position:relative; 
+        border-radius:10px;
+    }
+
+    .mb-tooltip-content { 
+
+        opacity:1;
+        opacity:0; 
+        width:200px; 
+        background-color:#333; 
+        color:#FFF; 
+        font-size:0.9em; 
+        position:absolute; 
+        top:0; 
+        left:20px; 
+        padding:8px; 
+        border-radius:6px; 
+        pointer-events:none; 
+        transition:0.2s cubic-bezier(0.1, 0.1, 0.25, 2);
+        -webkit-transition:0.3s cubic-bezier(0.1, 0.2, 0.5, 2.2);
+        -moz-transition:0.3s cubic-bezier(0.1, 0.2, 0.5, 2.2);
+    }
+
+    p {
+        padding:0; 
+    }
+
+}
+
+.mb-tooltip.mb-down {
+
+    .mb-tooltip-content {
+
+        left:auto; 
+        right:0; 
+        top:30px; 
+
+        b {
+
+            left:auto; 
+            right:6px; 
+            top:-10px; 
+            border-width:5px; 
+            border-color:transparent #333 #333 transparent; 
+        }
+    }
+}

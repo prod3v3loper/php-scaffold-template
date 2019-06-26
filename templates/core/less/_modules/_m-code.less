@@ -1,0 +1,60 @@
+/* 
+ *  Created on : 24.03.2017, 01:39:01
+ *  @copyright : Samet Tarim
+ *  @author    : Samet Tarim aka prod3v3loper
+ *  @link      : https://www.prod3v3loper.com/
+ */
+
+.mb-code {
+
+    display: block;
+    overflow: auto;
+
+    margin: 1em auto;
+    padding: 2px 10px;
+
+    background-color: #222;
+
+    font: 1rem @codeFont;
+    color: #E3CEAB;
+
+    border-radius: 4px;
+    border: 1px solid #EBEBEB;
+
+    white-space: pre;
+    
+    .box-sizing();
+}
+
+.mb-pre {
+
+    overflow: scroll;
+    display: block;
+
+    margin: 1em auto;
+    padding: 1em;
+
+    background-color: #ddd;
+    color: #000;
+
+    font: 1rem @codeFont;
+}
+
+.mb-pre-code {
+
+    overflow: scroll;
+    display: block;
+
+    margin: 1em auto;
+    padding: 0;
+
+    background-color: #ddd;
+    color: #000;
+
+    font: 1rem @codeFont;
+
+    .mb-code {
+
+        margin: 0 auto;
+    }
+}
