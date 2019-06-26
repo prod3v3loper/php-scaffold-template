@@ -1,4 +1,4 @@
-# PHP Scaffolding
+# 🛠 PHP Scaffolding
 
 ![Languages](https://img.shields.io/github/languages/top/prod3v3loper/php-scaffold-template.svg?style=flat "Languages")
 ![Code size](https://img.shields.io/github/languages/code-size/prod3v3loper/php-scaffold-template.svg?style=flat "Code size")
@@ -64,7 +64,7 @@ possible.
 
 ## Authors
 
-**Samet Tarim** - *All works* - [prod3v3loper](https://www.tnado.com/author/prod3v3loper/)
+**Samet Tarim** - *All works*
 
 # Supporter
 
@@ -74,4 +74,4 @@ possible.
 
 # License
 
-[MIT](https://github.com/prod3v3loper/php-scaffold-template/blob/master/LICENSE)
+[MIT](https://github.com/prod3v3loper/php-scaffold-template/blob/master/LICENSE) - [prod3v3loper](https://www.prod3v3loper.com)
