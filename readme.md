@@ -8,6 +8,8 @@
 
 Most use grunt, Webpack and then Yeoman as an example to create a scaffolding, but you can do that with all Languages here with PHP.
 
+You can also Scaffolden with Grunt and Webpack PHP projects and vice versa too. In addition, here comes more later on my repos.
+
 This repo here is a prepared template from [PHP MVC Advanced](https://github.com/prod3v3loper/php-mvc-advanced), you can either clone it in a folder of your choice.
 
 # Get Template
