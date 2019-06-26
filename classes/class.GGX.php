@@ -3,7 +3,13 @@
 /**
  * PHP Scaffolding by prod3v3loper
  * 
- * @see 
+ * @author      Samet Tarim
+ * @copyright   (c) 2019, Samet Tarim
+ * @link        https://www.prod3v3loper.com
+ * @package     melabuai
+ * @subpackage  mvc
+ * @version     1.0
+ * @since       1.0
  */
 class GGX extends GenGiX {
 
