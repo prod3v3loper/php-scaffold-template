@@ -64,14 +64,8 @@ possible.
 
 ## Authors
 
-**Samet Tarim** - *All works*
-
-# Supporter
-
-[Tnado](https://www.tnado.com/) -  SEO CMS
-
-[Hyperly](https://www.hyperly.de/) - Digital Agency
+**Samet Tarim** [prod3v3loper](https://www.prod3v3loper.com/) - *All works*
 
 # License
 
-[MIT](https://github.com/prod3v3loper/php-scaffold-template/blob/master/LICENSE) - [prod3v3loper](https://www.prod3v3loper.com)
+[MIT](https://github.com/prod3v3loper/php-scaffold-template/blob/master/LICENSE)
